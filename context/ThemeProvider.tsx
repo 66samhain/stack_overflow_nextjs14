@@ -13,12 +13,19 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mode, setMode] = useState(''); // light or dark
 
   const handleThemeChange = () => {
-    if (mode === 'dark') {
-      setMode('light');
-      document.documentElement.classList.add('light');
-    } else {
+    if (
+      // check if there is a dark theme in local storage OR if there is no theme in local storage but the browser prefers dark mode
+      localStorage.theme === 'dark' ||
+      (
+        !('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      )
+    ) {
       setMode('dark');
       document.documentElement.classList.add('dark');
+    } else {
+      setMode('light');
+      document.documentElement.classList.remove('dark');
     }
   };
 
