@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import {useTheme} from '@/context/ThemeProvider';
+import { useTheme } from '@/context/ThemeProvider';
 
 import {
   Menubar,
@@ -11,7 +11,7 @@ import {
   MenubarTrigger,
 } from '@/components/ui/menubar'
 import Image from 'next/image';
-import {themes} from '@/constants';
+import { themes } from '@/constants';
 
 
 function Theme() {
