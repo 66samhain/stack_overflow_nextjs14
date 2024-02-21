@@ -25,7 +25,8 @@ const NavContent = () => {
           (
             pathname.includes(item.route) && item.route.length >1
           ) ||
-          pathname === item.route;
+          pathname === item.route
+        ;
 
         return (
           <SheetClose asChild key={item.route}>
