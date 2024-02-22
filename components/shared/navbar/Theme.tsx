@@ -24,7 +24,7 @@ function Theme() {
           {mode === 'light' ? (
             <Image src="/assets/icons/sun.svg" alt="sun" width={20} height={20} className="active-theme"/>
           ) : (
-            <Image src="/assets/icons/sun.svg" alt="sun" width={20} height={20} className="active-theme"/>
+            <Image src="/assets/icons/moon.svg" alt="moon" width={20} height={20} className="active-theme"/>
           )
           }
         </MenubarTrigger>
