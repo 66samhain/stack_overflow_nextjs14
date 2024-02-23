@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import LocalSearch from '@/components/shared/search/LocalSearch';
 
 export default function Home() {
   return (
@@ -17,9 +18,9 @@ export default function Home() {
       </div>
 
       <div className="mt-11 flex justify-between gap-5 max-sm:flex-col sm:items-center">
-        LocalSearchbar
-        
-        Filters
+        <LocalSearch />
+
+        {/*Filters*/}
       </div>
     </>
   )
